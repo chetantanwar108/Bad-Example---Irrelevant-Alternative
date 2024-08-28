@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Example - Irrelevant Alternative</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .alternative-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .alternative-link:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bad Example - Irrelevant Alternative</h1>
+        
+        <h2>Image with Irrelevant Alternative</h2>
+        <img src="image.jpg" alt="A scenic landscape with mountains, a river, and trees">
+        <a href="#irrelevantDescription" class="alternative-link">View Alternative Description</a>
+        
+        <!-- Irrelevant Alternative Description Section -->
+        <div id="irrelevantDescription" style="display:none;">
+            <h3>Alternative Description</h3>
+            <p>This image contains a lot of colors and is visually appealing. It is meant to attract attention and create a vibrant look.</p>
+        </div>
+        
+        <script>
+            // JavaScript to toggle the alternative description visibility
+            document.querySelector('.alternative-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                const descriptionSection = document.getElementById('irrelevantDescription');
+                descriptionSection.style.display = descriptionSection.style.display === 'none' ? 'block' : 'none';
+            });
+        </script>
+    </div>
+</body>
+</html>
